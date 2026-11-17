@@ -3,13 +3,14 @@
 Outils utilisés : **Claude (Claude Code, modèle Claude Opus 5.5)**, en mode agent dans VS Code. L'agent lit les fichiers, génère le code et exécute les commandes (tests, vérificateur) sur ma machine.
 
 Déposez dans ce dossier vos exports de conversation ou vos copier-coller (prompts + réponses).
-→ Export complet de la session dans `IA/echanges.md` (48 échanges, identifiants E1…E48, mêmes numéros que le tableau ci-dessous). Le README renvoie à ce journal pour la démarche.
+→ Export complet de la session dans `IA/echanges.md` : 1 cadrage hors compte + 49 échanges numérotés, mêmes identifiants que le tableau ci-dessous. Le README renvoie à ce journal pour la démarche.
 
-Principe : une seule demande globale au départ (« lis le kit, respecte les règles du TP, ne produis rien tant que je ne demande pas une étape précise »), puis **un prompt = une action mesurable**. Chaque résultat est contrôlé avant d'être gardé : comparaison à `attendu.json`, `outils/verifier.py`, tests unitaires, ou évaluation sur rescans simulés. La numérotation ci-dessous suit les étapes du travail.
+Principe : le premier prompt demande à l'agent de lire le kit et d'expliciter **l'objectif du TP** — tâches attendues, format de sortie, mode d'évaluation — sans produire aucun fichier. Cette lecture fixe le cadre du travail. Ensuite, **un prompt = une action mesurable** : je désigne le fichier ou la fonction visée, et le critère qui permettra de juger le résultat. Chaque résultat est contrôlé avant d'être gardé : comparaison à `attendu.json`, `outils/verifier.py`, tests unitaires, ou évaluation sur rescans simulés. La numérotation suit les étapes du travail ; le cadrage d'ouverture, qui ne demande pas de code, n'est pas numéroté.
 
 | # | Ce que j'ai demandé (résumé du prompt) | Ce que l'IA a produit | Ce que j'en ai fait (accepté / corrigé / rejeté) et pourquoi |
 |---|---|---|---|
-| 1.1 | Lire le sujet, `verifier.py`, `scoring4.py`, `attendu.json` ; résumer le barème et les critères les plus rentables | Synthèse : A 40 / B 25 / Q 35, priorités F1 doublons (12 pts), classification (25 pts), exactitude par fichier lisible ; rappel que la sortie mal formée vaut zéro | **Accepté** — recoupé avec les sections 4 à 6 du sujet |
+| cadrage | Lire le kit et donner l'objectif du TP : tâches attendues, format de sortie, mode d'évaluation. Aucun fichier à produire | Objectif en quatre tâches (inventaire, normalisation, doublons, classification), format JSON imposé, barème A 40 / B 25 / Q 35, règle « sortie mal formée = zéro ». Double enjeu : généraliser à un dossier caché et tenir une démarche de qualité | **Accepté** — confronté aux sections 1 à 7 du sujet et au barème ; a servi de cadre pour découper le travail en étapes |
+| 1.1 | Lire le sujet, `verifier.py`, `scoring4.py`, `attendu.json` ; résumer le barème et les critères les plus rentables | Synthèse du barème, priorités F1 doublons (12 pts), classification (25 pts), exactitude par fichier lisible | **Accepté** — recoupé avec les sections 4 à 6 du sujet |
 | 1.2 | Lister les cas particuliers du dossier d'exemple : fichiers système, zip, PDF multipages, illisibles, lignes orphelines | 93 fichiers, 1 zip, PDF multipages, 6 illisibles, lignes de bordereau sans fichier | **Accepté** — vérification manuelle de quelques entrées |
 | 1.3 | Regarder dans `scoring4.py` comment le nom du bordereau est comparé aux chemins : avec ou sans extension ? | Comparaison sur le nom **avec** extension, insensible à la casse ; `relevé R1.jpg` et `relevé R1.pdf` sont deux entrées distinctes | **Accepté** — constat structurant pour la suite |
 | 1.4 | Extraire toutes les formes distinctes de bâtiment, niveau et date du bordereau | Tableau des formes rencontrées | **Accepté** — recoupé avec le tableau du § 4 du sujet |
@@ -57,7 +58,9 @@ Principe : une seule demande globale au départ (« lis le kit, respecte les rè
 | 9.4 | Sortir `valeur_cellule()` de la boucle de lecture du bordereau | Extraction | **Accepté** — notes des dossiers simulés inchangées |
 | 10.1 | Éliminer le faux doublon entre tableaux à grille identique : comparer le détail fin (texte des cases) à 384 et 512 px, après recalage | Filtre de détail | **Rejeté** — le faux doublon (0,756) dépasse plusieurs vrais doublons (jusqu'à 0,572 sur l'exemple réel) |
 | 10.2 | Appliquer le même filtre seulement aux paires de classes tableau et texte, puis combiner score global et détail | Variante ciblée | **Rejeté** — toujours pas de séparation (vrais doublons de tableaux à 0,63 à 0,72) ; seuil 0,76 conservé, limite documentée dans le README |
-| 11.1 | Donner l'objectif du TP en une synthèse | Automatiser le tri d'un dossier client (inventaire, normalisation, doublons, classification) au format JSON imposé ; double enjeu : généraliser à un dossier caché et une démarche de qualité | **Accepté** — correspond aux sections 1 à 7 et au barème ; m'a servi de grille de relecture avant rendu |
+| 11.1 | Redonner l'objectif du TP en une synthèse, pour relire le rendu | Automatiser le tri d'un dossier client (inventaire, normalisation, doublons, classification) au format JSON imposé ; double enjeu : généraliser à un dossier caché et une démarche de qualité | **Accepté** — reprise, sans code, du cadrage d'ouverture ; sert de grille de relecture avant rendu (sections 1 à 7 et barème relus point par point) |
+
+**Bilan : cadrage hors compte, puis 49 prompts numérotés — 34 acceptés en l'état, 1 accepté avec réserve (4.2), 9 corrigés après contrôle, 5 rejetés.**
 
 ## Ce que l'IA a mal fait ou mal compris, et comment je l'ai détecté
 
@@ -71,11 +74,11 @@ Principe : une seule demande globale au départ (« lis le kit, respecte les rè
 
 ## Ce que j'ai écrit ou conçu sans IA
 
-- **Le cadre** : règles du TP (bibliothèques autorisées, pas de dédoublonnage tout fait, format de sortie exact, aucun commentaire dans le code, tests approfondis), repris dans chaque prompt.
-- **Le découpage en prompts unitaires** : refus d'une demande globale, une action mesurable par prompt, pour pouvoir contrôler chaque résultat séparément (grille des étapes 1 à 11).
+- **Le cadrage d'ouverture** : demander d'abord l'objectif du TP, sans code, pour fixer les quatre tâches, le format de sortie et le mode d'évaluation avant de toucher au dépôt.
+- **Le découpage en prompts unitaires**, décidé dès le premier échange : un seul fichier ou une seule fonction par prompt, avec le critère de contrôle annoncé, pour pouvoir accepter ou rejeter chaque résultat séparément (grille des étapes 1 à 11).
 - **Le protocole de validation** : comparaison à `attendu.json`, `verifier.py`, tests unitaires, rescans simulés — imposé à chaque étape avant d'accepter un résultat.
 - **Les cas de test inventés** : fichiers cassés fabriqués, formes de bordereau absentes de l'exemple (« 2e sous-sol », dates à tirets), dossiers clients simulés avec référentiels inédits.
-- **Les décisions d'acceptation, de correction et de rejet** : seuil de similarité rejeté, vignettes rejetées, encre continue rejetée, filtre de détail rejeté, seuil 0,76 conservé.
+- **Les décisions d'acceptation, de correction et de rejet** : appariement approximatif rejeté, vignettes rejetées, encre continue rejetée, filtre de détail rejeté, seuil 0,76 conservé.
 - **La structure et le plan du README**, puis la vérification des chiffres cités.
 - **Ce journal et l'export des échanges** (`IA/echanges.md`).
 - **La relecture du code module par module**, pour pouvoir le modifier en séance sans IA.
