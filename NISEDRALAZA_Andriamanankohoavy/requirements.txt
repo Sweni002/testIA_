@@ -1,0 +1,5 @@
+numpy>=1.24
+Pillow>=9.1
+scipy>=1.10
+pypdfium2>=4.0
+scikit-learn>=1.3

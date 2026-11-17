@@ -1,0 +1,45 @@
+{
+ "batiments": [
+  {
+   "code": "BA",
+   "nom": "Bâtiment A",
+   "alias": [
+    "Bâtiment A - Logements",
+    "Logements A"
+   ]
+  },
+  {
+   "code": "BB",
+   "nom": "Bâtiment B",
+   "alias": [
+    "Bâtiment B - Bureaux"
+   ]
+  },
+  {
+   "code": "BC",
+   "nom": "Bâtiment C",
+   "alias": [
+    "Bâtiment C - Commerces",
+    "Commerces"
+   ]
+  },
+  {
+   "code": "PK",
+   "nom": "Parking",
+   "alias": [
+    "Parking souterrain"
+   ]
+  }
+ ],
+ "niveaux": [
+  "R-2",
+  "R-1",
+  "R+0",
+  "R+1",
+  "R+2",
+  "R+3",
+  "R+4",
+  "R+5",
+  "TT"
+ ]
+}

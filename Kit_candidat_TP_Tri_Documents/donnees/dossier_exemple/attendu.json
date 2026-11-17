@@ -1,0 +1,887 @@
+{
+ "fichiers": {
+  "nomenclature 8643.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Envoi client 2/nomenclature 1496.PDF": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2021-05-08"
+  },
+  "Docs administratifs/Document (7692).jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Document (5108).JPG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2022-10-09"
+  },
+  "PLAN_R1_713.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2024-03-14"
+  },
+  "Docs administratifs/plan ETAGE2 v3.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2019-09-04"
+  },
+  "Plans/relevé R1.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/Archives/relevé RDC.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2025-03-23"
+  },
+  "Envoi client 2/plan R1 v1.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2025-08-04"
+  },
+  "Docs administratifs/Scan_2807.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/facade 3251.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/CS-182.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2020-02-03"
+  },
+  "CS-5803.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2020-01-13"
+  },
+  "Plans/Scan_8126.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+5",
+   "date": "2021-12-02"
+  },
+  "Numérisation 6188.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2020-09-17"
+  },
+  "Plans/Archives/nomenclature 4631.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": "R+4",
+   "date": "2019-01-10"
+  },
+  "Plans/doc9503.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2024-06-24"
+  },
+  "Plans/Numérisation 2614.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/IMG_20241121_3270.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2023-12-21"
+  },
+  "Docs administratifs/IMG_20240314_6391.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2025-02-25"
+  },
+  "Envoi client 2/nomenclature 9011.JPG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2024-04-02"
+  },
+  "Docs administratifs/IMG_20240121_2011.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2020-06-10"
+  },
+  "IMG_20241123_2303.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2020-11-18"
+  },
+  "Plans/Archives/Numérisation 9469.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2022-12-09"
+  },
+  "Plans/Archives/courrier 8907.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/Archives/Document (1692).jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+2",
+   "date": "2020-09-02"
+  },
+  "Plans/facade 8803.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/Scan_5936.PDF": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/PLAN_R1_7990.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2019-01-09"
+  },
+  "Envoi client 2/IMG_20240320_5028.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2025-02-18"
+  },
+  "Docs administratifs/relevé RDC.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2021-06-06"
+  },
+  "IMG_20240416_1582.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": "R-2",
+   "date": "2024-04-02"
+  },
+  "Envoi client 2/courrier 762.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2019-12-07"
+  },
+  "Docs administratifs/facade 3836.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2021-06-25"
+  },
+  "Envoi client 2/nomenclature 3237.JPG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": "R+5",
+   "date": "2019-01-12"
+  },
+  "Plans/Document (8070).jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+5",
+   "date": "2024-04-22"
+  },
+  "Plans/relevé R1.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2019-05-12"
+  },
+  "IMG_20240315_9375.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+4",
+   "date": "2021-10-26"
+  },
+  "Document (1303).png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2019-02-11"
+  },
+  "Envoi client 2/CS-308.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BB",
+   "niveau": "R+3",
+   "date": "2024-02-25"
+  },
+  "Envoi client 2/CS-7399.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+1",
+   "date": "2024-07-22"
+  },
+  "Numérisation 1370.PNG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+2",
+   "date": "2023-10-08"
+  },
+  "Plans/Archives/relevé SS1.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": "R+4",
+   "date": "2023-07-10"
+  },
+  "Plans/Archives/relevé RDC.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2022-10-07"
+  },
+  "Plans/courrier 4985.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2020-05-26"
+  },
+  "Envoi client 2/courrier 1941.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Envoi client 2/relevé R1.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2022-04-06"
+  },
+  "Envoi client 2/PLAN_SS1_801.JPG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2024-09-03"
+  },
+  "Numérisation 4551.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2020-09-20"
+  },
+  "Docs administratifs/doc5511.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2019-07-28"
+  },
+  "Docs administratifs/facade 7696.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": "R+3",
+   "date": "2019-01-18"
+  },
+  "Plans/doc7926.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+1",
+   "date": "2020-12-14"
+  },
+  "Envoi client 2/Document (5930).pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/IMG_20240811_4989.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Envoi client 2/plan SS1 v1.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2021-07-09"
+  },
+  "Plans/facade 1978.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2020-07-17"
+  },
+  "Plans/Archives/nomenclature 4512.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Docs administratifs/courrier 9385.PDF": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2022-11-04"
+  },
+  "relevé ETAGE2.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2023-12-12"
+  },
+  "Plans/nomenclature 1629.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2023-01-13"
+  },
+  "Plans/PLAN_R1_3400.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2019-07-24"
+  },
+  "Docs administratifs/courrier 3500.PNG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Plans/facade 8459.PNG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": null,
+   "date": "2020-07-01"
+  },
+  "Docs administratifs/PLAN_R1_4738.pdf": {
+   "statut": "ok",
+   "pages": 2,
+   "batiment": "BB",
+   "niveau": null,
+   "date": "2023-01-19"
+  },
+  "Plans/Archives/IMG_20240108_7919.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2024-04-28"
+  },
+  "Docs administratifs/plan ETAGE2 v3.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+1",
+   "date": "2019-03-03"
+  },
+  "Plans/Archives/Scan_8503.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": "R-1",
+   "date": "2020-01-01"
+  },
+  "Plans/IMG_20241221_2059.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2020-12-22"
+  },
+  "Docs administratifs/facade 1236.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Envoi client 2/Numérisation 5799.PNG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2024-09-14"
+  },
+  "Plans/Archives/PLAN_ETAGE2_604.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+1",
+   "date": "2019-03-03"
+  },
+  "doc9859.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "TT",
+   "date": "2020-12-23"
+  },
+  "Plans/Archives/Scan_1278.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BB",
+   "niveau": "R+1",
+   "date": "2021-10-21"
+  },
+  "Plans/PLAN_ETAGE2_7015.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2024-04-02"
+  },
+  "Docs administratifs/Scan_3849.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Docs administratifs/PLAN_R1_9281.PNG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2021-11-24"
+  },
+  "Docs administratifs/PLAN_RDC_2483.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-2",
+   "date": "2020-07-17"
+  },
+  "Plans/Archives/plan R1 v4.pdf": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BC",
+   "niveau": "R+1",
+   "date": "2020-12-14"
+  },
+  "Plans/Archives/Numérisation 4765.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Docs administratifs/PLAN_R1_8442.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": "R+5",
+   "date": "2019-01-12"
+  },
+  "Plans/doc4371.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2019-09-04"
+  },
+  "Plans/relevé SS1.PDF": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2019-05-12"
+  },
+  "Plans/Archives/courrier 6539.JPG": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2019-01-09"
+  },
+  "CS-3471.pdf": {
+   "statut": "ok",
+   "pages": 3,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Docs administratifs/Numérisation 8502.png": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2023-12-12"
+  },
+  "envoi_complementaire.zip/courrier 7145.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": "R-1",
+   "date": "2025-02-16"
+  },
+  "envoi_complementaire.zip/PLAN_SS1_2683.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "BA",
+   "niveau": null,
+   "date": "2022-09-14"
+  },
+  "envoi_complementaire.zip/PLAN_SS1_552.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": "R-1",
+   "date": "2025-07-04"
+  },
+  "envoi_complementaire.zip/doc8685.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "envoi_complementaire.zip/PLAN_RDC_567.jpg": {
+   "statut": "ok",
+   "pages": 1,
+   "batiment": "PK",
+   "niveau": null,
+   "date": "2022-11-04"
+  },
+  "Plans/facade 5104.jpg": {
+   "statut": "illisible",
+   "pages": 0,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Docs administratifs/doc3091.pdf": {
+   "statut": "illisible",
+   "pages": 0,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  },
+  "Numérisation 6624.png": {
+   "statut": "illisible",
+   "pages": 0,
+   "batiment": null,
+   "niveau": null,
+   "date": null
+  }
+ },
+ "pages": {
+  "nomenclature 8643.jpg#1": "plan",
+  "Envoi client 2/nomenclature 1496.PDF#1": "tableau",
+  "Envoi client 2/nomenclature 1496.PDF#2": "tableau",
+  "Docs administratifs/Document (7692).jpg#1": "plan_situation",
+  "Document (5108).JPG#1": "texte",
+  "PLAN_R1_713.png#1": "plan",
+  "Docs administratifs/plan ETAGE2 v3.jpg#1": "plan",
+  "Plans/relevé R1.jpg#1": "coupe_facade",
+  "Plans/Archives/relevé RDC.png#1": "plan_situation",
+  "Envoi client 2/plan R1 v1.jpg#1": "texte",
+  "Docs administratifs/Scan_2807.pdf#1": "tableau",
+  "Docs administratifs/Scan_2807.pdf#2": "tableau",
+  "Docs administratifs/Scan_2807.pdf#3": "tableau",
+  "Plans/facade 3251.png#1": "plan",
+  "Plans/CS-182.jpg#1": "coupe_facade",
+  "CS-5803.png#1": "plan_situation",
+  "Plans/Scan_8126.jpg#1": "texte",
+  "Numérisation 6188.pdf#1": "tableau",
+  "Numérisation 6188.pdf#2": "texte",
+  "Numérisation 6188.pdf#3": "tableau",
+  "Plans/Archives/nomenclature 4631.png#1": "plan",
+  "Plans/doc9503.jpg#1": "coupe_facade",
+  "Plans/Numérisation 2614.pdf#1": "plan_situation",
+  "Plans/IMG_20241121_3270.jpg#1": "texte",
+  "Docs administratifs/IMG_20240314_6391.jpg#1": "tableau",
+  "Envoi client 2/nomenclature 9011.JPG#1": "plan",
+  "Docs administratifs/IMG_20240121_2011.pdf#1": "tableau",
+  "Docs administratifs/IMG_20240121_2011.pdf#2": "tableau",
+  "Docs administratifs/IMG_20240121_2011.pdf#3": "tableau",
+  "IMG_20241123_2303.pdf#1": "tableau",
+  "Plans/Archives/Numérisation 9469.pdf#1": "texte",
+  "Plans/Archives/Numérisation 9469.pdf#2": "tableau",
+  "Plans/Archives/courrier 8907.pdf#1": "tableau",
+  "Plans/Archives/courrier 8907.pdf#2": "tableau",
+  "Plans/Archives/courrier 8907.pdf#3": "tableau",
+  "Plans/Archives/Document (1692).jpg#1": "plan",
+  "Plans/facade 8803.jpg#1": "coupe_facade",
+  "Plans/Scan_5936.PDF#1": "plan",
+  "Plans/PLAN_R1_7990.jpg#1": "plan_situation",
+  "Envoi client 2/IMG_20240320_5028.pdf#1": "tableau",
+  "Envoi client 2/IMG_20240320_5028.pdf#2": "tableau",
+  "Docs administratifs/relevé RDC.jpg#1": "plan",
+  "IMG_20240416_1582.pdf#1": "coupe_facade",
+  "Envoi client 2/courrier 762.jpg#1": "plan_situation",
+  "Docs administratifs/facade 3836.pdf#1": "texte",
+  "Docs administratifs/facade 3836.pdf#2": "texte",
+  "Envoi client 2/nomenclature 3237.JPG#1": "coupe_facade",
+  "Plans/Document (8070).jpg#1": "plan",
+  "Plans/relevé R1.pdf#1": "texte",
+  "IMG_20240315_9375.png#1": "plan_situation",
+  "Document (1303).png#1": "texte",
+  "Envoi client 2/CS-308.pdf#1": "tableau",
+  "Envoi client 2/CS-308.pdf#2": "tableau",
+  "Envoi client 2/CS-7399.pdf#1": "plan",
+  "Numérisation 1370.PNG#1": "coupe_facade",
+  "Plans/Archives/relevé SS1.jpg#1": "plan_situation",
+  "Plans/Archives/relevé RDC.pdf#1": "texte",
+  "Plans/courrier 4985.jpg#1": "tableau",
+  "Envoi client 2/courrier 1941.png#1": "plan",
+  "Envoi client 2/relevé R1.png#1": "coupe_facade",
+  "Envoi client 2/PLAN_SS1_801.JPG#1": "plan_situation",
+  "Numérisation 4551.pdf#1": "texte",
+  "Numérisation 4551.pdf#2": "texte",
+  "Docs administratifs/doc5511.pdf#1": "tableau",
+  "Docs administratifs/doc5511.pdf#2": "tableau",
+  "Docs administratifs/doc5511.pdf#3": "tableau",
+  "Docs administratifs/facade 7696.png#1": "plan",
+  "Plans/doc7926.jpg#1": "coupe_facade",
+  "Envoi client 2/Document (5930).pdf#1": "plan",
+  "Plans/IMG_20240811_4989.pdf#1": "texte",
+  "Plans/IMG_20240811_4989.pdf#2": "tableau",
+  "Envoi client 2/plan SS1 v1.png#1": "tableau",
+  "Plans/facade 1978.png#1": "plan",
+  "Plans/Archives/nomenclature 4512.jpg#1": "tableau",
+  "Docs administratifs/courrier 9385.PDF#1": "plan_situation",
+  "relevé ETAGE2.png#1": "texte",
+  "Plans/nomenclature 1629.png#1": "tableau",
+  "Plans/PLAN_R1_3400.pdf#1": "plan",
+  "Docs administratifs/courrier 3500.PNG#1": "coupe_facade",
+  "Plans/facade 8459.PNG#1": "plan_situation",
+  "Docs administratifs/PLAN_R1_4738.pdf#1": "texte",
+  "Docs administratifs/PLAN_R1_4738.pdf#2": "texte",
+  "Plans/Archives/IMG_20240108_7919.pdf#1": "tableau",
+  "Plans/Archives/IMG_20240108_7919.pdf#2": "tableau",
+  "Plans/Archives/IMG_20240108_7919.pdf#3": "tableau",
+  "Docs administratifs/plan ETAGE2 v3.png#1": "plan",
+  "Plans/Archives/Scan_8503.png#1": "coupe_facade",
+  "Plans/IMG_20241221_2059.png#1": "plan_situation",
+  "Docs administratifs/facade 1236.jpg#1": "coupe_facade",
+  "Envoi client 2/Numérisation 5799.PNG#1": "tableau",
+  "Plans/Archives/PLAN_ETAGE2_604.jpg#1": "plan",
+  "doc9859.pdf#1": "plan",
+  "Plans/Archives/Scan_1278.pdf#1": "coupe_facade",
+  "Plans/PLAN_ETAGE2_7015.pdf#1": "plan",
+  "Docs administratifs/Scan_3849.pdf#1": "plan",
+  "Docs administratifs/PLAN_R1_9281.PNG#1": "plan_situation",
+  "Docs administratifs/PLAN_RDC_2483.jpg#1": "plan",
+  "Plans/Archives/plan R1 v4.pdf#1": "coupe_facade",
+  "Plans/Archives/Numérisation 4765.jpg#1": "plan",
+  "Docs administratifs/PLAN_R1_8442.jpg#1": "coupe_facade",
+  "Plans/doc4371.jpg#1": "plan",
+  "Plans/relevé SS1.PDF#1": "texte",
+  "Plans/Archives/courrier 6539.JPG#1": "plan_situation",
+  "CS-3471.pdf#1": "tableau",
+  "CS-3471.pdf#2": "tableau",
+  "CS-3471.pdf#3": "tableau",
+  "Docs administratifs/Numérisation 8502.png#1": "texte",
+  "envoi_complementaire.zip/courrier 7145.jpg#1": "texte",
+  "envoi_complementaire.zip/PLAN_SS1_2683.jpg#1": "plan_situation",
+  "envoi_complementaire.zip/PLAN_SS1_552.jpg#1": "plan",
+  "envoi_complementaire.zip/doc8685.jpg#1": "tableau",
+  "envoi_complementaire.zip/PLAN_RDC_567.jpg#1": "plan_situation"
+ },
+ "doublons": [
+  [
+   "CS-3471.pdf#1",
+   "Docs administratifs/doc5511.pdf#1"
+  ],
+  [
+   "CS-3471.pdf#2",
+   "Docs administratifs/doc5511.pdf#2"
+  ],
+  [
+   "CS-3471.pdf#3",
+   "Docs administratifs/doc5511.pdf#3"
+  ],
+  [
+   "Docs administratifs/IMG_20240314_6391.jpg#1",
+   "envoi_complementaire.zip/doc8685.jpg#1"
+  ],
+  [
+   "Docs administratifs/Numérisation 8502.png#1",
+   "relevé ETAGE2.png#1"
+  ],
+  [
+   "Docs administratifs/PLAN_R1_8442.jpg#1",
+   "Envoi client 2/nomenclature 3237.JPG#1",
+   "Plans/Archives/Scan_1278.pdf#1"
+  ],
+  [
+   "Docs administratifs/PLAN_R1_9281.PNG#1",
+   "Plans/IMG_20241221_2059.png#1"
+  ],
+  [
+   "Docs administratifs/PLAN_RDC_2483.jpg#1",
+   "Plans/facade 1978.png#1"
+  ],
+  [
+   "Docs administratifs/Scan_3849.pdf#1",
+   "Envoi client 2/courrier 1941.png#1"
+  ],
+  [
+   "Docs administratifs/courrier 9385.PDF#1",
+   "envoi_complementaire.zip/PLAN_RDC_567.jpg#1"
+  ],
+  [
+   "Docs administratifs/plan ETAGE2 v3.jpg#1",
+   "Plans/doc4371.jpg#1"
+  ],
+  [
+   "Docs administratifs/plan ETAGE2 v3.png#1",
+   "Plans/Archives/PLAN_ETAGE2_604.jpg#1"
+  ],
+  [
+   "Envoi client 2/Document (5930).pdf#1",
+   "Plans/Archives/Numérisation 4765.jpg#1"
+  ],
+  [
+   "Envoi client 2/nomenclature 9011.JPG#1",
+   "Plans/PLAN_ETAGE2_7015.pdf#1"
+  ],
+  [
+   "Plans/Archives/courrier 6539.JPG#1",
+   "Plans/PLAN_R1_7990.jpg#1"
+  ],
+  [
+   "Plans/Archives/plan R1 v4.pdf#1",
+   "Plans/doc7926.jpg#1"
+  ],
+  [
+   "Plans/facade 3251.png#1",
+   "doc9859.pdf#1"
+  ],
+  [
+   "Plans/relevé R1.pdf#1",
+   "Plans/relevé SS1.PDF#1"
+  ]
+ ],
+ "manquants": [
+  "CS-8729.pdf",
+  "Document (1840).pdf",
+  "courrier 9579.PDF"
+ ],
+ "paires_exactes": [
+  [
+   "Docs administratifs/plan ETAGE2 v3.jpg#1",
+   "Plans/doc4371.jpg#1"
+  ],
+  [
+   "Docs administratifs/IMG_20240314_6391.jpg#1",
+   "envoi_complementaire.zip/doc8685.jpg#1"
+  ],
+  [
+   "Plans/Archives/courrier 6539.JPG#1",
+   "Plans/PLAN_R1_7990.jpg#1"
+  ],
+  [
+   "Docs administratifs/PLAN_R1_8442.jpg#1",
+   "Envoi client 2/nomenclature 3237.JPG#1"
+  ],
+  [
+   "Plans/relevé R1.pdf#1",
+   "Plans/relevé SS1.PDF#1"
+  ],
+  [
+   "CS-3471.pdf#1",
+   "Docs administratifs/doc5511.pdf#1"
+  ],
+  [
+   "CS-3471.pdf#2",
+   "Docs administratifs/doc5511.pdf#2"
+  ],
+  [
+   "CS-3471.pdf#3",
+   "Docs administratifs/doc5511.pdf#3"
+  ],
+  [
+   "Docs administratifs/Numérisation 8502.png#1",
+   "relevé ETAGE2.png#1"
+  ]
+ ]
+}
