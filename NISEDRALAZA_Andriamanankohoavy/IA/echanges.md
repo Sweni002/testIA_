@@ -1,9 +1,18 @@
-# Échanges avec l'IA (Deepseek)
+# Échanges avec l'IA (Claude Code, Claude Opus 5.5)
+
+## Objectif du TP 
+
+- Réponse : automatiser le tri des dossiers clients de Futurmap avec `trier.py`, qui produit un JSON au format
+  imposé.
+- Les 4 tâches : inventaire (pages, illisibles, zip), normalisation du bordereau (bâtiment, niveau, date,
+  manquants), détection des doublons avec une logique écrite soi-même, classification des pages en 5 types.
+- Le double enjeu : bien généraliser à un dossier caché, et une démarche de qualité (code lisible, tests, README,
+  IA maîtrisée, code modifiable sans IA en séance).
 
 ## Demande initiale (résumé)
 
 Réaliser l'outil de tri décrit par l'énoncé du TP, sous les contraintes suivantes :
-- respect strict du règlement : bibliothèques autorisées, pas de bibliothèque de dédoublonnage, logique écrite
+
   soi-même, format de sortie exact ;
 - aucun commentaire dans le code ;
 - tests approfondis ;
@@ -48,3 +57,27 @@ Réaliser l'outil de tri décrit par l'énoncé du TP, sous les contraintes suiv
    docstring dans les `.py`.
 10. **Rédaction** du README et de ce journal. Deux chiffres faux du README (nombre de caractéristiques, borne des
     scores) ont été vérifiés par calcul, puis corrigés.
+11. **Demande : tester le rendu pour viser une bonne note.**
+    - Tests (46), lint et vérificateur : tout est vert, 40/40 et 25/25.
+    - Génération de 3 dossiers cachés simulés, inédits, notés avec `scoring4.py` :
+
+      | Dossier | Partie A | Partie B | Perte |
+      |---|---|---|---|
+      | simulé 1 | 38,67 | 25 | F1 doublons 0,889 |
+      | simulé 2 | 39,12 | 25 | F1 doublons 0,927 |
+      | simulé 3 | 40 | 25 | aucune |
+
+    - Analyse : paires manquées = rescans simulés extrêmes ; 1 faux doublon entre deux tableaux de même grille (0,786).
+    - Essai d'un filtre de détail à 384 et 512 px : il ne sépare pas les cas, donc rejeté.
+12. **Demande : corriger le code si besoin pour l'améliorer.**
+    - Normalisation : « 2e sous-sol » → R-2 (au lieu de R-1) ; dates à tirets (« 15-mars-2024 ») reconnues.
+      4 tests ajoutés.
+    - Refactorisations de lisibilité : `plages()`, `nombre_pages` / `liberer_pages()`, `valeur_cellule()`.
+      Caractéristiques identiques au bit près, donc modèle inchangé.
+    - Contrôles : 46 tests verts, vérificateur 40/40 et 25/25 en 18,5 s, notes des dossiers simulés inchangées.
+13. **Demande : revoir le seuil des doublons.**
+    - Filtre de détail limité aux tableaux et textes, puis combiné au score global : toujours pas de séparation
+      (vrais doublons de tableaux à 0,63 à 0,72, faux doublon à 0,686 à 0,756).
+    - Décision : seuil 0,76 conservé.
+14. **Demande : « donne l'objectif de ce TP ».** Réponse reprise dans la section « Objectif du TP » en haut de ce
+    fichier.
