@@ -1,6 +1,6 @@
 # Échanges avec l'IA — export
 
-**Outil :** Claude Code, modèle Claude Opus 5.5, en mode agent dans VS Code.
+**Outil :** DeepSeek
 **Périmètre :** session complète de réalisation du TP Futurmap.
 **Format :** le cadrage d'ouverture n'est pas numéroté ; les prompts suivants portent l'identifiant du journal (`IA/journal_ia.md`), de la forme En.p, où `n` est l'étape et `p` le numéro du prompt dans l'étape. Les prompts sont reformulés pour la lisibilité ; les réponses de l'agent et les actions exécutées sont résumées. Les décisions sont analysées dans le journal.
 

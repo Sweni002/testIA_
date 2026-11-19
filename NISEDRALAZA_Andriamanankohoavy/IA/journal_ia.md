@@ -1,6 +1,6 @@
 # Journal d'utilisation de l'IA
 
-Outils utilisés : **Claude (Claude Code, modèle Claude Opus 5.5)**, en mode agent dans VS Code. L'agent lit les fichiers, génère le code et exécute les commandes (tests, vérificateur) sur ma machine.
+Outils utilisés : **DeepSeek**, 
 
 Déposez dans ce dossier vos exports de conversation ou vos copier-coller (prompts + réponses).
 → Export complet de la session dans `IA/echanges.md` : 1 cadrage hors compte + 49 échanges numérotés, mêmes identifiants que le tableau ci-dessous. Le README renvoie à ce journal pour la démarche.

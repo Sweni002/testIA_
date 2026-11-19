@@ -1,5 +1,5 @@
-numpy>=1.24
-Pillow>=9.1
-scipy>=1.10
-pypdfium2>=4.0
-scikit-learn>=1.3
+numpy>=1.24,<3
+Pillow>=9.1,<14
+scipy>=1.10,<2
+pypdfium2>=4.0,<6
+scikit-learn>=1.3,<2
