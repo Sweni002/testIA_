@@ -42,6 +42,15 @@ class TestLecture(unittest.TestCase):
         self.assertEqual((lignes[0].nom, lignes[0].batiment, lignes[0].niveau, lignes[0].date),
                          ("a.pdf", "BA", "R+1", "01/02/2020"))
 
+    def test_entetes_abreges_et_virgule(self):
+        lignes = lire_lignes("Remarques,Date de réception,Fichier,Niv.,Bât\nok,01/02/2020,a.pdf,R+1,BA\n")
+        self.assertEqual((lignes[0].nom, lignes[0].batiment, lignes[0].niveau, lignes[0].date),
+                         ("a.pdf", "BA", "R+1", "01/02/2020"))
+
+    def test_nom_du_batiment_pas_pris_pour_le_fichier(self):
+        lignes = lire_lignes("Nom du bâtiment;Nom du fichier;Etage;Date\nBA;a.pdf;R+1;01/02/2020\n")
+        self.assertEqual((lignes[0].nom, lignes[0].batiment), ("a.pdf", "BA"))
+
     def test_lignes_courtes_et_vides(self):
         lignes = lire_lignes("Nom du fichier;Bâtiment;Niveau;Date\nseul.pdf\n;;;\n\n")
         self.assertEqual(len(lignes), 1)

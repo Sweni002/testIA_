@@ -5,6 +5,7 @@ from scipy import ndimage
 COTE_TRAVAIL = 500
 SEUIL_BANDE = 0.8
 FRACTION_ENCRE = 0.5
+ANGLE_MAX = 12
 
 
 def redimensionner(tableau: np.ndarray, forme: tuple) -> np.ndarray:
@@ -74,7 +75,7 @@ def angle_inclinaison(densite: np.ndarray) -> float:
         hx = np.bincount((xr - xr.min()).astype(int), poids)
         return float((hy ** 2).sum() + (hx ** 2).sum())
 
-    meilleur = max(np.arange(-6, 6.01, 0.5), key=energie)
+    meilleur = max(np.arange(-ANGLE_MAX, ANGLE_MAX + 0.01, 0.5), key=energie)
     return float(max(np.arange(meilleur - 0.5, meilleur + 0.51, 0.1), key=energie))
 
 

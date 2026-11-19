@@ -9,10 +9,10 @@ from tri.normalisation import (NIVEAUX_PAR_DEFAUT, ReferentielBatiments, normali
                                normaliser_niveau, simplifier)
 
 COLONNES = {
-    "fichier": ("fichier", "nom"),
-    "batiment": ("batiment", "bat"),
-    "niveau": ("niveau", "etage"),
-    "date": ("date",),
+    "fichier": ("fichier", "fichiers", "file", "filename", "document", "nom"),
+    "batiment": ("batiment", "bat", "bt", "bati", "immeuble", "bloc", "building", "bldg"),
+    "niveau": ("niveau", "niv", "etage", "etg", "level", "lvl", "floor"),
+    "date": ("date", "dates"),
 }
 POSITIONS_PAR_DEFAUT = {"fichier": 0, "batiment": 1, "niveau": 2, "date": 3}
 
@@ -54,10 +54,10 @@ def reperer_colonnes(entete: list) -> dict | None:
     simples = [simplifier(cellule) for cellule in entete]
     positions = {}
     for champ, mots in COLONNES.items():
-        for index, cellule in enumerate(simples):
-            if index not in positions.values() and any(mot in cellule.split() for mot in mots):
-                positions[champ] = index
-                break
+        candidats = [(mots.index(mot), index) for index, cellule in enumerate(simples) if index not in positions.values()
+                     for mot in mots if mot in cellule.split()]
+        if candidats:
+            positions[champ] = min(candidats)[1]
     return positions if "fichier" in positions else None
 
 

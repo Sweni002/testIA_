@@ -4,7 +4,6 @@ import fabrique
 from tri.normalisation import ReferentielBatiments, normaliser_date, normaliser_niveau
 
 
-
 class TestBatiment(unittest.TestCase):
     def setUp(self):
         self.referentiel = ReferentielBatiments(fabrique.BATIMENTS)
@@ -24,8 +23,17 @@ class TestBatiment(unittest.TestCase):
         self.assertEqual(self.referentiel.normaliser("Bat A logements neufs"), "BA")
         self.assertEqual(self.referentiel.normaliser("Bureaux"), "BB")
 
+    def test_abreviations_et_singuliers(self):
+        cas = {
+            "Bt A": "BA", "Bld A": "BA", "Immeuble A": "BA", "Bloc A": "BA", "Log. A": "BA", "Logement": "BA",
+            "Bureau": "BB", "Commerce": "BC", "Park.": "PK", "Parking sous-sol": "PK",
+        }
+        for valeur, attendu in cas.items():
+            with self.subTest(valeur=valeur):
+                self.assertEqual(self.referentiel.normaliser(valeur), attendu)
+
     def test_valeurs_inconnues_ou_vides(self):
-        for valeur in ("", None, "   ", "Bâtiment Z", "batiment", "inconnu"):
+        for valeur in ("", None, "   ", "Bâtiment Z", "batiment", "inconnu", "Logistique", "Parc", "Batiment A1"):
             with self.subTest(valeur=valeur):
                 self.assertIsNone(self.referentiel.normaliser(valeur))
 
@@ -45,8 +53,25 @@ class TestNiveau(unittest.TestCase):
             with self.subTest(valeur=valeur):
                 self.assertEqual(normaliser_niveau(valeur), attendu)
 
+    def test_variantes_abregees_et_anglaises(self):
+        cas = {
+            "R +1": "R+1", "R+01": "R+1", "N-1": "R-1", "Niv. -1": "R-1", "Niveau R+3": "R+3", "-1": "R-1",
+            "Etage 1er": "R+1", "E1": "R+1", "Etg 2": "R+2", "Et. 3": "R+3", "4ème": "R+4", "RDJ": "R+0",
+            "Sous sol niveau 2": "R-2", "Deuxième sous-sol": "R-2", "SS-2": "R-2", "Basement 1": "R-1",
+            "B1": "R-1", "Ground floor": "R+0", "1st floor": "R+1", "Floor 2": "R+2", "Level 3": "R+3",
+            "Roof": "TT", "R‑1": "R-1",
+        }
+        for valeur, attendu in cas.items():
+            with self.subTest(valeur=valeur):
+                self.assertEqual(normaliser_niveau(valeur), attendu)
+
+    def test_lettre_de_batiment_non_confondue(self):
+        for valeur, attendu in {"Bat B niveau 2": "R+2", "Niv 2 B": "R+2", "Lot 3": None, "Rue 3": None}.items():
+            with self.subTest(valeur=valeur):
+                self.assertEqual(normaliser_niveau(valeur), attendu)
+
     def test_hors_referentiel_ou_vide(self):
-        for valeur in ("", None, "R+9", "SS 4", "grenier"):
+        for valeur in ("", None, "R+9", "SS 4", "grenier", "Mezzanine", "Etage"):
             with self.subTest(valeur=valeur):
                 self.assertIsNone(normaliser_niveau(valeur))
 
@@ -68,8 +93,19 @@ class TestDate(unittest.TestCase):
             with self.subTest(valeur=valeur):
                 self.assertEqual(normaliser_date(valeur), attendu)
 
+    def test_formats_exportes_et_anglais(self):
+        cas = {
+            "2024-03-15 00:00:00": "2024-03-15", "15/03/2024 10:30": "2024-03-15", "15 03 2024": "2024-03-15",
+            "Mar 15, 2024": "2024-03-15", "March 15, 2024": "2024-03-15", "15-Mar-24": "2024-03-15",
+            "mars 15 2024": "2024-03-15", "Sept. 4, 2019": "2019-09-04", "15032024": "2024-03-15",
+            "20240315": "2024-03-15", "45366": "2024-03-15", "45366.0": "2024-03-15", "15‑03‑2024": "2024-03-15",
+        }
+        for valeur, attendu in cas.items():
+            with self.subTest(valeur=valeur):
+                self.assertEqual(normaliser_date(valeur), attendu)
+
     def test_dates_invalides_ou_vides(self):
-        for valeur in ("", None, "31/02/2024", "mars 2024", "n/a", "45 truc 2020"):
+        for valeur in ("", None, "31/02/2024", "mars 2024", "n/a", "45 truc 2020", "12345", "2024"):
             with self.subTest(valeur=valeur):
                 self.assertIsNone(normaliser_date(valeur))
 

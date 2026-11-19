@@ -57,8 +57,10 @@ Résultat de `python outils/verifier.py` sur le dossier d'exemple : **A = 40/40,
 ## Normalisation du bordereau
 
 Lecture : on tente UTF-8 strict, sinon Windows-1252. Le séparateur `;` est attendu (`\t` et `,` sont acceptés en
-secours). Les colonnes sont repérées par leur en-tête (« fichier », « bâtiment », « niveau », « date »), avec repli sur
-l'ordre du sujet. La correspondance avec un fichier se fait sur le **nom de base avec extension**, sans tenir compte de
+secours). Les colonnes sont repérées par leur en-tête (« fichier », « bâtiment », « niveau », « date », et leurs
+abréviations ou équivalents anglais : « Bât », « Niv. », « Etg », « File », « Floor »…), avec repli sur l'ordre du sujet.
+Le mot le plus précis l'emporte : dans « Nom du bâtiment ; Nom du fichier », c'est la seconde colonne qui donne le
+fichier. La correspondance avec un fichier se fait sur le **nom de base avec extension**, sans tenir compte de
 la casse (`casefold` + NFC). Si un nom apparaît deux fois, les champs vides de la première ligne sont complétés par la
 suivante. `manquants` contient les noms tels qu'écrits dans le bordereau, sans doublon.
 
@@ -70,20 +72,30 @@ Toutes les comparaisons se font sur une forme simplifiée : sans accents, en min
   2. la forme la plus longue contenue dans la valeur (`Bat A logements neufs` → BA) ;
   3. une seule forme qui contient la valeur (`Bureaux` → BB).
 
+  Deux mots se correspondent s'ils sont égaux, s'ils ne diffèrent que par un pluriel en -s/-x (`Commerce`,
+  `Bureau`), ou si le mot saisi est une abréviation d'au moins 3 lettres (`Log. A`, `Park.`). `Immeuble`, `Bloc`,
+  `Bld` sont traités comme « bâtiment ».
+
   En cas d'ambiguïté, ou si rien ne correspond, la valeur est `null`. Pas d'appariement approximatif de type
   distance d'édition : avec `Bâtiment A` / `Bâtiment B`, il confondrait les bâtiments.
 - **Niveau** : expressions régulières appliquées dans l'ordre suivant.
-  - toiture / terrasse / TT → `TT`
-  - RDC / rez → `R+0`
-  - SS n, sous-sol n, S-Sol n, « 2e sous-sol » → `R-n` ; « sous-sol » sans numéro → `R-1`
-  - R±n, Rn, Niv n, Niveau ±n, Etage n → `R±n`
-  - « n er/e/ème étage » → `R+n` (les ordinaux en lettres, comme « premier », sont convertis en chiffres)
+  - toiture / terrasse / TT / roof → `TT`
+  - RDC / rez / RDJ / ground floor → `R+0`
+  - SS n, sous-sol n, S-Sol n, « 2e sous-sol », Basement n, B n (valeur seule) → `R-n` ; « sous-sol » sans numéro → `R-1`
+  - R±n, Rn, N±n, Niv n, Niveau ±n, Etage n, Etg n, Et. n, E n, Level n, Floor n → `R±n`
+  - « n er/e/ème étage », « 1st floor », « 4ème » seul → `R+n` (les ordinaux en lettres, comme « premier », sont
+    convertis en chiffres)
+
+  Un nombre isolé à la fin d'une valeur (« Lot 3 ») n'est pas pris pour un niveau, et la lettre B n'est lue comme
+  sous-sol que si la valeur est exactement « B1 », pour ne pas confondre avec le bâtiment B.
 
   Le résultat n'est gardé que s'il figure dans la liste `niveaux` du référentiel.
 - **Date** : AAAA-MM-JJ, JJ/MM/AAAA, JJ-MM-AA, JJ.MM.AA… (lecture française jour/mois, années à 2 chiffres → 20xx si
   < 70), mois en toutes lettres ou abrégés avec ou sans accent, séparés par des espaces ou des tirets (« 3 févr. 2021 »,
-  « 1er août 2022 », « 15-mars-2024 », jour de semaine toléré), AAAAMMJJ. Les dates impossibles (31/02) donnent `null`. Si le mois dépasse 12 mais que le jour est valide
-  comme mois, on tente l'inversion.
+  « 1er août 2022 », « 15-mars-2024 », jour de semaine toléré), mois en tête à l'anglaise (« Mar 15, 2024 »),
+  JJ MM AAAA séparés par des espaces, AAAAMMJJ, JJMMAAAA, heure ignorée (« 2024-03-15 00:00:00 ») et numéro de
+  série Excel seul (« 45366 »). Les tirets typographiques sont ramenés au tiret simple. Les dates impossibles (31/02)
+  donnent `null`. Si le mois dépasse 12 mais que le jour est valide comme mois, on tente l'inversion.
 
 Cas non couverts : fautes de frappe dans les noms de bâtiments, dates sans jour (« mars 2024 »), niveaux décrits en
 toutes lettres hors du vocabulaire listé.
@@ -101,7 +113,7 @@ Logique entièrement écrite à la main (numpy/scipy), sans bibliothèque de dé
      page pour ne pas être faussé par les bandes ;
    - retrait des traits fins et longs qui touchent le bord (bande de scanner inclinée) ;
    - densité d'encre à 500 px ;
-   - redressement : angle de −6° à +6° qui maximise l'énergie des projections horizontale et verticale (recherche
+   - redressement : angle de −12° à +12° qui maximise l'énergie des projections horizontale et verticale (recherche
      grossière puis fine au 1/10 de degré, calculée sur les coordonnées des pixels d'encre, donc rapide) ;
    - recadrage sur le contenu, en ignorant les petites taches de bruit.
 
@@ -177,10 +189,11 @@ paires, ce qui reste rapide pour quelques centaines de pages (environ 3 s pour 1
 python -m unittest discover -s tests -v
 ```
 
-46 tests (environ 22 s) :
-- `test_normalisation.py` : toutes les formes citées dans le sujet pour bâtiment, niveau et date, plus les valeurs
-  vides, inconnues, ambiguës ou impossibles.
-- `test_bordereau.py` : Windows-1252 et UTF-8, colonnes dans un autre ordre, lignes courtes, lignes en double,
+52 tests (environ 35 s) :
+- `test_normalisation.py` : toutes les formes citées dans le sujet pour bâtiment, niveau et date, des variantes
+  abrégées, anglaises ou issues d'un export Excel, plus les valeurs vides, inconnues, ambiguës ou impossibles, et des
+  pièges (« Lot 3 », « Bat B niveau 2 »).
+- `test_bordereau.py` : Windows-1252 et UTF-8, colonnes dans un autre ordre, en-têtes abrégés, lignes courtes, lignes en double,
   correspondance insensible à la casse, manquants.
 - `test_inventaire.py` : dossier synthétique avec PDF multipage, zip avec sous-dossier, fichiers système, et
   illisibles (vide, texte en `.png`, PDF cassé, PNG nommé `.jpg`, JPEG tronqué, zip corrompu, extension inconnue).
@@ -193,6 +206,10 @@ python -m unittest discover -s tests -v
   minimale sur le dossier d'exemple du kit s'il est présent à côté du rendu.
 
 ## Limites connues et pistes d'amélioration
+
+- Sur des rescans simulés plus durs que ceux de l'exemple (80 pages), le rappel des doublons reste de 0,975 jusqu'à
+  10° d'inclinaison et de 0,94 sur une page très pâle, mais tombe à 0,51 avec un flou fort (σ = 1,5 px) et à 0,31
+  si 10 % de la page est coupée : les traits fins pâlis ou coupés changent le cadre du contenu.
 
 - Si deux fichiers de dossiers différents portent le même nom, ils reçoivent la même ligne de bordereau (le bordereau
   ne donne pas le chemin).
